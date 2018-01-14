@@ -1,6 +1,6 @@
 # rigol_dg1022_tools
 
-0)
+## Introduction
 Perl command line tools to manage rdf wavform files for the Rigol DG1022
 arbitrary function generator.
 
@@ -9,8 +9,8 @@ the Rigol DG1022 arbitrary function generator (rdf files).
 As I was interacting with LTSpice anyway, I used its pwl format as a standard
 and provided a function to convert LTSpice pwl files to rdf format.
 
-
-1)
+## pwl2rdf.pl
+```
 Usage: pwl2rdf.pl [-OPTIONS] [--] [< FILENAME]
        pwl2rdf.pl [-OPTIONS] [--] [FILENAME ...]
        cat FILENAME | pwl2rdf.pl [-OPTIONS]
@@ -24,9 +24,10 @@ Convert a pwl formatted sequence into a RIGOL rdf data file.
   -y value  Use range from 0..val (<= 65535).
   --help    Show this help text.
   --version Show program version.
+```
 
-
-2)
+## pwl.pl
+```
 Usage: pwl.pl [-OPTIONS] [--] [< FILENAME]
        pwl.pl [-OPTIONS] [--] [FILENAME ...]
        cat FILENAME | pwl.pl [-OPTIONS]
@@ -63,9 +64,10 @@ calculation.
   -T x      Transform time so that Tmax becomes x.
   --help    Show this help text.
   --version Show program version.
+```
 
-
-3)
+## rdfdump.pl
+```
 Usage: rdfump.pl [-OPTIONS] [--] FILENAME
 
 Dump a RIGOL rdf data file as two column text. 
@@ -73,6 +75,4 @@ Dump a RIGOL rdf data file as two column text.
   -d        Produce debug output.
   --help    Show this help text.
   --version Show program version.
-
-
-
+```
